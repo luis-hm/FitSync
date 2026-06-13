@@ -1,5 +1,5 @@
-import { ModulePage } from "@/components/shared/module-page";
+import { AdminSettingsPage as AdminSettingsScreen } from "@/features/core/components/admin-settings-page";
 
 export default function AdminSettingsPage() {
-  return <ModulePage title="Configuracoes" description="Parametros operacionais da aplicacao." />;
+  return <AdminSettingsScreen />;
 }

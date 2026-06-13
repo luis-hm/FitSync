@@ -1,5 +1,5 @@
-import { ModulePage } from "@/components/shared/module-page";
+import { AdminExercisesPage as AdminExercisesScreen } from "@/features/workouts/components/admin-exercises-page";
 
 export default function AdminExercisesPage() {
-  return <ModulePage title="Exercicios" description="Base global de exercicios disponivel para os treinos." />;
+  return <AdminExercisesScreen />;
 }

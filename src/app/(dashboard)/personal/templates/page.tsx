@@ -1,5 +1,5 @@
-import { ModulePage } from "@/components/shared/module-page";
+import { PersonalTemplatesPage as PersonalTemplatesScreen } from "@/features/workouts/components/personal-templates-page";
 
 export default function PersonalTemplatesPage() {
-  return <ModulePage title="Templates" description="Modelos de treino reutilizaveis para alunos." />;
+  return <PersonalTemplatesScreen />;
 }

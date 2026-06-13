@@ -1,5 +1,5 @@
-import { ModulePage } from "@/components/shared/module-page";
+import { PersonalStudentsPage as PersonalStudentsScreen } from "@/features/accounts/components/personal-students-page";
 
 export default function PersonalStudentsPage() {
-  return <ModulePage title="Alunos" description="Carteira de alunos vinculados ao personal." />;
+  return <PersonalStudentsScreen />;
 }

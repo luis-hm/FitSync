@@ -1,5 +1,5 @@
-import { ModulePage } from "@/components/shared/module-page";
+import { PersonalWorkoutsPage as PersonalWorkoutsScreen } from "@/features/workouts/components/personal-workouts-page";
 
 export default function PersonalWorkoutsPage() {
-  return <ModulePage title="Treinos" description="Treinos aplicados e historico de rotinas." />;
+  return <PersonalWorkoutsScreen />;
 }

@@ -36,6 +36,38 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/api/accounts/admin/alunos/{id}/": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get: operations["accounts_admin_alunos_retrieve"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch: operations["accounts_admin_alunos_partial_update"];
+        trace?: never;
+    };
+    "/api/accounts/admin/dashboard/": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get: operations["accounts_admin_dashboard_retrieve"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/api/accounts/admin/personais/": {
         parameters: {
             query?: never;
@@ -50,6 +82,22 @@ export interface paths {
         options?: never;
         head?: never;
         patch?: never;
+        trace?: never;
+    };
+    "/api/accounts/admin/personais/{id}/": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get: operations["accounts_admin_personais_retrieve"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch: operations["accounts_admin_personais_partial_update"];
         trace?: never;
     };
     "/api/accounts/admin/usuarios/": {
@@ -141,7 +189,7 @@ export interface paths {
         };
         get: operations["accounts_personal_alunos_list"];
         put?: never;
-        post?: never;
+        post: operations["accounts_personal_alunos_create"];
         delete?: never;
         options?: never;
         head?: never;
@@ -161,7 +209,39 @@ export interface paths {
         delete?: never;
         options?: never;
         head?: never;
+        patch: operations["accounts_personal_alunos_partial_update"];
+        trace?: never;
+    };
+    "/api/accounts/personal/dashboard/": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get: operations["accounts_personal_dashboard_retrieve"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
         patch?: never;
+        trace?: never;
+    };
+    "/api/assessments/alunos/{id}/anamnese/": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get: operations["assessments_alunos_anamnese_retrieve"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch: operations["assessments_alunos_anamnese_partial_update"];
         trace?: never;
     };
     "/api/assessments/alunos/{id}/evolucao/": {
@@ -178,6 +258,54 @@ export interface paths {
         options?: never;
         head?: never;
         patch?: never;
+        trace?: never;
+    };
+    "/api/assessments/alunos/{id}/resumo/": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get: operations["assessments_alunos_resumo_retrieve"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/assessments/anamneses/": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get: operations["assessments_anamneses_list"];
+        put?: never;
+        post: operations["assessments_anamneses_create"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/assessments/anamneses/{id}/": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get: operations["assessments_anamneses_retrieve"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch: operations["assessments_anamneses_partial_update"];
         trace?: never;
     };
     "/api/assessments/avaliacoes/": {
@@ -222,6 +350,54 @@ export interface paths {
         get?: never;
         put?: never;
         post: operations["assessments_avaliacoes_arquivar_create"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/assessments/me/anamnese/": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get: operations["assessments_me_anamnese_retrieve"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch: operations["assessments_me_anamnese_partial_update"];
+        trace?: never;
+    };
+    "/api/assessments/me/evolucao/": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get: operations["assessments_me_evolucao_retrieve"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/assessments/me/resumo/": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get: operations["assessments_me_resumo_retrieve"];
+        put?: never;
+        post?: never;
         delete?: never;
         options?: never;
         head?: never;
@@ -404,6 +580,70 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/api/settings/": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get: operations["settings_retrieve"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch: operations["settings_partial_update"];
+        trace?: never;
+    };
+    "/api/workouts/categorias/": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get: operations["workouts_categorias_list"];
+        put?: never;
+        post: operations["workouts_categorias_create"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/workouts/categorias/{id}/": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get: operations["workouts_categorias_retrieve"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch: operations["workouts_categorias_partial_update"];
+        trace?: never;
+    };
+    "/api/workouts/categorias/{id}/arquivar/": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        post: operations["workouts_categorias_arquivar_create"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/api/workouts/exercicios/": {
         parameters: {
             query?: never;
@@ -436,6 +676,22 @@ export interface paths {
         patch: operations["workouts_exercicios_partial_update"];
         trace?: never;
     };
+    "/api/workouts/exercicios/{id}/aprovar/": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        post: operations["workouts_exercicios_aprovar_create"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/api/workouts/exercicios/{id}/arquivar/": {
         parameters: {
             query?: never;
@@ -446,6 +702,54 @@ export interface paths {
         get?: never;
         put?: never;
         post: operations["workouts_exercicios_arquivar_create"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/workouts/exercicios/{id}/rejeitar/": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        post: operations["workouts_exercicios_rejeitar_create"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/workouts/exercicios/aprovar-lote/": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        post: operations["workouts_exercicios_aprovar_lote_create"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/workouts/exercicios/rejeitar-lote/": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        post: operations["workouts_exercicios_rejeitar_lote_create"];
         delete?: never;
         options?: never;
         head?: never;
@@ -590,6 +894,71 @@ export interface components {
         AccountsOptions: {
             sexos: components["schemas"]["ChoiceOption"][];
         };
+        AdminAlunoUpdate: {
+            /** Format: uuid */
+            readonly id: string;
+            /** Format: uuid */
+            readonly usuario_id: string;
+            nome: string;
+            /** Format: email */
+            email: string;
+            readonly tipo: string;
+            is_active?: boolean;
+            /** Format: uuid */
+            personal_id?: string;
+            readonly personal_nome: string;
+            /** Format: date */
+            data_nascimento: string;
+            sexo: components["schemas"]["AlunoSexoEnum"];
+            objetivo_principal?: string;
+            observacoes_medicas?: string;
+        };
+        AdminDashboard: {
+            usuarios: {
+                [key: string]: unknown;
+            };
+            personais: {
+                [key: string]: unknown;
+            };
+            alunos: {
+                [key: string]: unknown;
+            };
+            exercicios: {
+                [key: string]: unknown;
+            };
+            treinos: {
+                [key: string]: unknown;
+            };
+            avaliacoes: {
+                [key: string]: unknown;
+            };
+        };
+        AdminPersonal: {
+            /** Format: uuid */
+            readonly id: string;
+            nome: string;
+            /** Format: email */
+            email: string;
+            readonly tipo: components["schemas"]["UsuarioTipoEnum"];
+            is_active?: boolean;
+            /**
+             * Último login
+             * Format: date-time
+             */
+            readonly last_login: string | null;
+            /** Format: date-time */
+            readonly data_criacao: string;
+            especialidade?: string;
+            bio?: string;
+            /** @default 0 */
+            readonly alunos_count: number;
+            /** @default 0 */
+            readonly treinos_count: number;
+            /** @default 0 */
+            readonly avaliacoes_count: number;
+            /** @default 0 */
+            readonly avaliacoes_30d_count: number;
+        };
         AdminUsuario: {
             /** Format: uuid */
             readonly id: string;
@@ -634,9 +1003,7 @@ export interface components {
             /** Format: uuid */
             aluno_id: string;
             aluno_nome: string;
-            results: {
-                [key: string]: unknown;
-            }[];
+            results: components["schemas"]["EvolucaoItem"][];
         };
         AlunoSelf: {
             /** Format: uuid */
@@ -660,6 +1027,39 @@ export interface components {
          * @enum {string}
          */
         AlunoSexoEnum: "M" | "F";
+        Anamnese: {
+            /** Format: uuid */
+            readonly id: string;
+            /** Format: uuid */
+            aluno_id: string;
+            readonly aluno_nome: string;
+            historico_familiar?: string;
+            doencas_preexistentes?: string;
+            lesoes?: string;
+            medicamentos?: string;
+            alergias?: string;
+            cirurgias?: string;
+            restricoes_exercicio?: string;
+            observacoes?: string;
+            ativo?: boolean;
+            /** Format: date-time */
+            readonly data_criacao: string;
+            /** Format: date-time */
+            readonly data_atualizacao: string;
+        };
+        AnamneseRequest: {
+            /** Format: uuid */
+            aluno_id: string;
+            historico_familiar?: string;
+            doencas_preexistentes?: string;
+            lesoes?: string;
+            medicamentos?: string;
+            alergias?: string;
+            cirurgias?: string;
+            restricoes_exercicio?: string;
+            observacoes?: string;
+            ativo?: boolean;
+        };
         ApiRootResponse: {
             service: string;
             modules: {
@@ -667,6 +1067,7 @@ export interface components {
             };
             health: string;
             options: string;
+            settings: string;
             docs: string;
         };
         AplicarTemplateRequest: {
@@ -696,6 +1097,8 @@ export interface components {
         Avaliacao: {
             /** Format: uuid */
             readonly id: string;
+            /** Format: uuid */
+            aluno_id: string;
             readonly aluno_nome: string;
             /** Format: uuid */
             readonly personal_id: string;
@@ -703,9 +1106,15 @@ export interface components {
             metodo: components["schemas"]["AvaliacaoMetodoEnum"];
             /** Format: date */
             data_avaliacao: string;
+            /** Format: date */
+            data_proxima_avaliacao?: string | null;
             /** Format: decimal */
             peso_kg: string;
             altura_cm: number;
+            /** Format: decimal */
+            readonly imc: string | null;
+            /** Format: decimal */
+            readonly iac: string | null;
             /** Format: decimal */
             readonly densidade_corporal: string | null;
             /** Format: decimal */
@@ -716,10 +1125,18 @@ export interface components {
             readonly massa_magra_kg: string | null;
             /** Format: decimal */
             readonly rcq: string | null;
+            readonly classificacao_imc: string;
+            readonly classificacao_iac: string;
+            readonly classificacao_rcq: string;
+            readonly classificacao_percentual_gordura: string;
+            readonly status_periodicidade: string;
+            readonly metodo_calculo: string;
             feedback_personal?: string;
             ativo?: boolean;
             /** Format: date-time */
             readonly data_criacao: string;
+            /** Format: date-time */
+            readonly data_atualizacao: string;
             dobras?: components["schemas"]["AvaliacaoDobras"] | null;
             bioimpedancia?: components["schemas"]["AvaliacaoBioimpedancia"] | null;
             circunferencias?: components["schemas"]["AvaliacaoCircunferencias"] | null;
@@ -766,15 +1183,25 @@ export interface components {
             /** Format: decimal */
             quadril_cm: string;
             /** Format: decimal */
-            braco_relaxado_cm: string;
+            braco_relaxado_esq_cm: string;
             /** Format: decimal */
-            braco_contraido_cm: string;
+            braco_relaxado_dir_cm: string;
             /** Format: decimal */
-            antebraco_cm: string;
+            braco_contraido_esq_cm: string;
             /** Format: decimal */
-            coxa_cm: string;
+            braco_contraido_dir_cm: string;
             /** Format: decimal */
-            panturrilha_cm: string;
+            antebraco_esq_cm: string;
+            /** Format: decimal */
+            antebraco_dir_cm: string;
+            /** Format: decimal */
+            coxa_esq_cm: string;
+            /** Format: decimal */
+            coxa_dir_cm: string;
+            /** Format: decimal */
+            panturrilha_esq_cm: string;
+            /** Format: decimal */
+            panturrilha_dir_cm: string;
         };
         AvaliacaoCircunferenciasRequest: {
             /** Format: decimal */
@@ -788,15 +1215,25 @@ export interface components {
             /** Format: decimal */
             quadril_cm: string;
             /** Format: decimal */
-            braco_relaxado_cm: string;
+            braco_relaxado_esq_cm: string;
             /** Format: decimal */
-            braco_contraido_cm: string;
+            braco_relaxado_dir_cm: string;
             /** Format: decimal */
-            antebraco_cm: string;
+            braco_contraido_esq_cm: string;
             /** Format: decimal */
-            coxa_cm: string;
+            braco_contraido_dir_cm: string;
             /** Format: decimal */
-            panturrilha_cm: string;
+            antebraco_esq_cm: string;
+            /** Format: decimal */
+            antebraco_dir_cm: string;
+            /** Format: decimal */
+            coxa_esq_cm: string;
+            /** Format: decimal */
+            coxa_dir_cm: string;
+            /** Format: decimal */
+            panturrilha_esq_cm: string;
+            /** Format: decimal */
+            panturrilha_dir_cm: string;
         };
         AvaliacaoDobras: {
             /** Format: decimal */
@@ -846,6 +1283,8 @@ export interface components {
             metodo: components["schemas"]["AvaliacaoMetodoEnum"];
             /** Format: date */
             data_avaliacao: string;
+            /** Format: date */
+            data_proxima_avaliacao?: string | null;
             /** Format: decimal */
             peso_kg: string;
             altura_cm: number;
@@ -855,8 +1294,32 @@ export interface components {
             bioimpedancia?: components["schemas"]["AvaliacaoBioimpedanciaRequest"] | null;
             circunferencias?: components["schemas"]["AvaliacaoCircunferenciasRequest"] | null;
         };
+        AvaliacaoResumoResponse: {
+            /** Format: uuid */
+            aluno_id: string;
+            aluno_nome: string;
+            ultima_avaliacao: components["schemas"]["Avaliacao"] | null;
+        };
         /** @enum {unknown} */
         BlankEnum: "";
+        BulkActionResponse: {
+            updated: number;
+        };
+        CategoriaExercicio: {
+            /** Format: uuid */
+            readonly id: string;
+            nome: string;
+            readonly slug: string;
+            ativo?: boolean;
+            ordem?: number;
+            /** Format: date-time */
+            readonly data_criacao: string;
+        };
+        CategoriaExercicioRequest: {
+            nome: string;
+            ativo?: boolean;
+            ordem?: number;
+        };
         ChoiceOption: {
             value: string;
             label: string;
@@ -864,24 +1327,123 @@ export interface components {
         DetailResponse: {
             detail: string;
         };
+        EvolucaoCircunferencias: {
+            /** Format: decimal */
+            pescoco_cm: string | null;
+            /** Format: decimal */
+            torax_cm: string | null;
+            /** Format: decimal */
+            cintura_cm: string | null;
+            /** Format: decimal */
+            abdome_cm: string | null;
+            /** Format: decimal */
+            quadril_cm: string | null;
+            /** Format: decimal */
+            braco_relaxado_esq_cm: string | null;
+            /** Format: decimal */
+            braco_relaxado_dir_cm: string | null;
+            /** Format: decimal */
+            braco_contraido_esq_cm: string | null;
+            /** Format: decimal */
+            braco_contraido_dir_cm: string | null;
+            /** Format: decimal */
+            antebraco_esq_cm: string | null;
+            /** Format: decimal */
+            antebraco_dir_cm: string | null;
+            /** Format: decimal */
+            coxa_esq_cm: string | null;
+            /** Format: decimal */
+            coxa_dir_cm: string | null;
+            /** Format: decimal */
+            panturrilha_esq_cm: string | null;
+            /** Format: decimal */
+            panturrilha_dir_cm: string | null;
+        };
+        EvolucaoDeltas: {
+            /** Format: decimal */
+            peso_kg: string | null;
+            /** Format: decimal */
+            imc: string | null;
+            /** Format: decimal */
+            iac: string | null;
+            /** Format: decimal */
+            percentual_gordura: string | null;
+            /** Format: decimal */
+            massa_gorda_kg: string | null;
+            /** Format: decimal */
+            massa_magra_kg: string | null;
+            /** Format: decimal */
+            rcq: string | null;
+            circunferencias: components["schemas"]["EvolucaoCircunferencias"];
+        };
+        EvolucaoItem: {
+            /** Format: uuid */
+            id: string;
+            /** Format: date */
+            data_avaliacao: string;
+            /** Format: date */
+            data_proxima_avaliacao: string | null;
+            metodo: components["schemas"]["AvaliacaoMetodoEnum"];
+            metodo_calculo: string | null;
+            /** Format: decimal */
+            peso_kg: string;
+            /** Format: decimal */
+            imc: string | null;
+            /** Format: decimal */
+            iac: string | null;
+            /** Format: decimal */
+            percentual_gordura: string | null;
+            /** Format: decimal */
+            massa_gorda_kg: string | null;
+            /** Format: decimal */
+            massa_magra_kg: string | null;
+            /** Format: decimal */
+            rcq: string | null;
+            classificacao_imc: string | null;
+            classificacao_iac: string | null;
+            classificacao_rcq: string | null;
+            classificacao_percentual_gordura: string | null;
+            status_periodicidade: string;
+            circunferencias: components["schemas"]["EvolucaoCircunferencias"];
+            deltas: components["schemas"]["EvolucaoDeltas"];
+        };
         Exercicio: {
             /** Format: uuid */
             readonly id: string;
             nome: string;
-            grupo_muscular: string;
+            readonly slug: string;
+            /** Format: uuid */
+            categoria_id?: string | null;
+            readonly categoria_nome: string;
+            grupo_muscular?: string;
             /** Format: uri */
-            url_animacao?: string;
+            readonly url_animacao: string;
             instrucoes_gerais?: string;
+            status?: components["schemas"]["StatusEnum"];
+            readonly origem: components["schemas"]["OrigemEnum"];
+            readonly wger_id: number | null;
+            /** Format: uuid */
+            readonly wger_uuid: string | null;
+            /** Format: uri */
+            readonly fonte_url: string;
+            readonly licenca_nome: string;
+            /** Format: uri */
+            readonly licenca_url: string;
+            readonly licenca_autor: string;
             ativo?: boolean;
             /** Format: date-time */
             readonly data_criacao: string;
         };
+        ExercicioBulkActionRequest: {
+            ids: string[];
+        };
         ExercicioRequest: {
             nome: string;
-            grupo_muscular: string;
-            /** Format: uri */
-            url_animacao?: string;
+            /** Format: uuid */
+            categoria_id?: string | null;
+            grupo_muscular?: string;
             instrucoes_gerais?: string;
+            status?: components["schemas"]["StatusEnum"];
             ativo?: boolean;
         };
         HealthCheckResponse: {
@@ -937,6 +1499,42 @@ export interface components {
             workouts: components["schemas"]["WorkoutsOptions"];
             assessments: components["schemas"]["AssessmentsOptions"];
         };
+        /**
+         * @description * `MANUAL` - Manual
+         *     * `WGER` - wger
+         * @enum {string}
+         */
+        OrigemEnum: "MANUAL" | "WGER";
+        PaginatedAdminAlunoUpdateList: {
+            /** @example 123 */
+            count: number;
+            /**
+             * Format: uri
+             * @example http://api.example.org/accounts/?page=4
+             */
+            next?: string | null;
+            /**
+             * Format: uri
+             * @example http://api.example.org/accounts/?page=2
+             */
+            previous?: string | null;
+            results: components["schemas"]["AdminAlunoUpdate"][];
+        };
+        PaginatedAdminPersonalList: {
+            /** @example 123 */
+            count: number;
+            /**
+             * Format: uri
+             * @example http://api.example.org/accounts/?page=4
+             */
+            next?: string | null;
+            /**
+             * Format: uri
+             * @example http://api.example.org/accounts/?page=2
+             */
+            previous?: string | null;
+            results: components["schemas"]["AdminPersonal"][];
+        };
         PaginatedAdminUsuarioList: {
             /** @example 123 */
             count: number;
@@ -967,6 +1565,21 @@ export interface components {
             previous?: string | null;
             results: components["schemas"]["Aluno"][];
         };
+        PaginatedAnamneseList: {
+            /** @example 123 */
+            count: number;
+            /**
+             * Format: uri
+             * @example http://api.example.org/accounts/?page=4
+             */
+            next?: string | null;
+            /**
+             * Format: uri
+             * @example http://api.example.org/accounts/?page=2
+             */
+            previous?: string | null;
+            results: components["schemas"]["Anamnese"][];
+        };
         PaginatedAvaliacaoList: {
             /** @example 123 */
             count: number;
@@ -981,6 +1594,21 @@ export interface components {
              */
             previous?: string | null;
             results: components["schemas"]["Avaliacao"][];
+        };
+        PaginatedCategoriaExercicioList: {
+            /** @example 123 */
+            count: number;
+            /**
+             * Format: uri
+             * @example http://api.example.org/accounts/?page=4
+             */
+            next?: string | null;
+            /**
+             * Format: uri
+             * @example http://api.example.org/accounts/?page=2
+             */
+            previous?: string | null;
+            results: components["schemas"]["CategoriaExercicio"][];
         };
         PaginatedExercicioList: {
             /** @example 123 */
@@ -1027,21 +1655,6 @@ export interface components {
             previous?: string | null;
             results: components["schemas"]["TreinoTemplate"][];
         };
-        PaginatedUsuarioList: {
-            /** @example 123 */
-            count: number;
-            /**
-             * Format: uri
-             * @example http://api.example.org/accounts/?page=4
-             */
-            next?: string | null;
-            /**
-             * Format: uri
-             * @example http://api.example.org/accounts/?page=2
-             */
-            previous?: string | null;
-            results: components["schemas"]["Usuario"][];
-        };
         PasswordResetConfirmRequest: {
             uid: string;
             token: string;
@@ -1051,6 +1664,28 @@ export interface components {
         PasswordResetRequestRequest: {
             /** Format: email */
             email: string;
+        };
+        PatchedAdminAlunoUpdateRequest: {
+            nome?: string;
+            /** Format: email */
+            email?: string;
+            is_active?: boolean;
+            /** Format: uuid */
+            personal_id?: string;
+            /** Format: date */
+            data_nascimento?: string;
+            sexo?: components["schemas"]["AlunoSexoEnum"];
+            objetivo_principal?: string;
+            observacoes_medicas?: string;
+        };
+        PatchedAdminPersonalRequest: {
+            nome?: string;
+            /** Format: email */
+            email?: string;
+            is_active?: boolean;
+            password?: string;
+            especialidade?: string;
+            bio?: string;
         };
         PatchedAdminUsuarioRequest: {
             nome?: string;
@@ -1075,12 +1710,27 @@ export interface components {
             objetivo_principal?: string;
             observacoes_medicas?: string;
         };
+        PatchedAnamneseRequest: {
+            /** Format: uuid */
+            aluno_id?: string;
+            historico_familiar?: string;
+            doencas_preexistentes?: string;
+            lesoes?: string;
+            medicamentos?: string;
+            alergias?: string;
+            cirurgias?: string;
+            restricoes_exercicio?: string;
+            observacoes?: string;
+            ativo?: boolean;
+        };
         PatchedAvaliacaoRequest: {
             /** Format: uuid */
             aluno_id?: string;
             metodo?: components["schemas"]["AvaliacaoMetodoEnum"];
             /** Format: date */
             data_avaliacao?: string;
+            /** Format: date */
+            data_proxima_avaliacao?: string | null;
             /** Format: decimal */
             peso_kg?: string;
             altura_cm?: number;
@@ -1090,16 +1740,36 @@ export interface components {
             bioimpedancia?: components["schemas"]["AvaliacaoBioimpedanciaRequest"] | null;
             circunferencias?: components["schemas"]["AvaliacaoCircunferenciasRequest"] | null;
         };
+        PatchedCategoriaExercicioRequest: {
+            nome?: string;
+            ativo?: boolean;
+            ordem?: number;
+        };
         PatchedExercicioRequest: {
             nome?: string;
+            /** Format: uuid */
+            categoria_id?: string | null;
             grupo_muscular?: string;
-            /** Format: uri */
-            url_animacao?: string;
             instrucoes_gerais?: string;
+            status?: components["schemas"]["StatusEnum"];
             ativo?: boolean;
         };
         PatchedMeUpdateRequest: {
             nome?: string;
+        };
+        PatchedPersonalAlunoUpdateRequest: {
+            nome?: string;
+            /** Format: date */
+            data_nascimento?: string;
+            sexo?: components["schemas"]["AlunoSexoEnum"];
+            objetivo_principal?: string;
+            observacoes_medicas?: string;
+        };
+        PatchedPlatformSettingsRequest: {
+            nome_plataforma?: string;
+            /** Format: email */
+            suporte_email?: string;
+            cadastro_publico_ativo?: boolean;
         };
         PatchedTreinoRequest: {
             /** Format: uuid */
@@ -1119,10 +1789,68 @@ export interface components {
             ativo?: boolean;
             itens?: components["schemas"]["ItemTreinoTemplateRequest"][];
         };
-        PersonalRankingResponse: {
-            results: {
+        PersonalAlunoCreateRequest: {
+            nome: string;
+            /** Format: email */
+            email: string;
+            password: string;
+            /** Format: date */
+            data_nascimento: string;
+            sexo: components["schemas"]["AlunoSexoEnum"];
+            objetivo_principal?: string;
+            observacoes_medicas?: string;
+        };
+        PersonalAlunoUpdate: {
+            /** Format: uuid */
+            readonly id: string;
+            nome: string;
+            /** Format: email */
+            readonly email: string;
+            readonly tipo: string;
+            /** Format: uuid */
+            readonly personal_id: string;
+            readonly personal_nome: string;
+            /** Format: date */
+            data_nascimento: string;
+            sexo: components["schemas"]["AlunoSexoEnum"];
+            objetivo_principal?: string;
+            observacoes_medicas?: string;
+        };
+        PersonalDashboard: {
+            alunos: {
+                [key: string]: unknown;
+            };
+            treinos: {
+                [key: string]: unknown;
+            };
+            avaliacoes: {
+                [key: string]: unknown;
+            };
+            ranking: {
                 [key: string]: unknown;
             }[];
+        };
+        PersonalRankingItem: {
+            /** Format: uuid */
+            aluno_id: string;
+            aluno_nome: string;
+            /** Format: decimal */
+            percentual_inicial: string;
+            /** Format: decimal */
+            percentual_final: string;
+            /** Format: decimal */
+            variacao_percentual_gordura: string;
+        };
+        PersonalRankingResponse: {
+            results: components["schemas"]["PersonalRankingItem"][];
+        };
+        PlatformSettings: {
+            nome_plataforma?: string;
+            /** Format: email */
+            suporte_email?: string;
+            cadastro_publico_ativo?: boolean;
+            /** Format: date-time */
+            readonly data_atualizacao: string;
         };
         RefreshRequest: {
             refresh?: string;
@@ -1154,9 +1882,18 @@ export interface components {
          * @enum {string}
          */
         RegisterTipoEnum: "PERSONAL" | "ALUNO";
+        /**
+         * @description * `PENDENTE` - Pendente
+         *     * `APROVADO` - Aprovado
+         *     * `REJEITADO` - Rejeitado
+         * @enum {string}
+         */
+        StatusEnum: "PENDENTE" | "APROVADO" | "REJEITADO";
         Treino: {
             /** Format: uuid */
             readonly id: string;
+            /** Format: uuid */
+            aluno_id: string;
             readonly aluno_nome: string;
             /** Format: uuid */
             readonly template_origem_id: string;
@@ -1264,8 +2001,10 @@ export interface operations {
     accounts_admin_alunos_list: {
         parameters: {
             query?: {
-                /** @description Um número de página dentro do conjunto de resultados paginado. */
+                ativo?: boolean;
                 page?: number;
+                personal_id?: string;
+                search?: string;
             };
             header?: never;
             path?: never;
@@ -1278,7 +2017,74 @@ export interface operations {
                     [name: string]: unknown;
                 };
                 content: {
-                    "application/json": components["schemas"]["PaginatedAlunoList"];
+                    "application/json": components["schemas"]["PaginatedAdminAlunoUpdateList"];
+                };
+            };
+        };
+    };
+    accounts_admin_alunos_retrieve: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                id: string;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["AdminAlunoUpdate"];
+                };
+            };
+        };
+    };
+    accounts_admin_alunos_partial_update: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                id: string;
+            };
+            cookie?: never;
+        };
+        requestBody?: {
+            content: {
+                "application/json": components["schemas"]["PatchedAdminAlunoUpdateRequest"];
+                "application/x-www-form-urlencoded": components["schemas"]["PatchedAdminAlunoUpdateRequest"];
+                "multipart/form-data": components["schemas"]["PatchedAdminAlunoUpdateRequest"];
+            };
+        };
+        responses: {
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["AdminAlunoUpdate"];
+                };
+            };
+        };
+    };
+    accounts_admin_dashboard_retrieve: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["AdminDashboard"];
                 };
             };
         };
@@ -1286,8 +2092,9 @@ export interface operations {
     accounts_admin_personais_list: {
         parameters: {
             query?: {
-                /** @description Um número de página dentro do conjunto de resultados paginado. */
+                ativo?: boolean;
                 page?: number;
+                search?: string;
             };
             header?: never;
             path?: never;
@@ -1300,7 +2107,55 @@ export interface operations {
                     [name: string]: unknown;
                 };
                 content: {
-                    "application/json": components["schemas"]["PaginatedUsuarioList"];
+                    "application/json": components["schemas"]["PaginatedAdminPersonalList"];
+                };
+            };
+        };
+    };
+    accounts_admin_personais_retrieve: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                id: string;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["AdminPersonal"];
+                };
+            };
+        };
+    };
+    accounts_admin_personais_partial_update: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                id: string;
+            };
+            cookie?: never;
+        };
+        requestBody?: {
+            content: {
+                "application/json": components["schemas"]["PatchedAdminPersonalRequest"];
+                "application/x-www-form-urlencoded": components["schemas"]["PatchedAdminPersonalRequest"];
+                "multipart/form-data": components["schemas"]["PatchedAdminPersonalRequest"];
+            };
+        };
+        responses: {
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["AdminPersonal"];
                 };
             };
         };
@@ -1308,8 +2163,10 @@ export interface operations {
     accounts_admin_usuarios_list: {
         parameters: {
             query?: {
-                /** @description Um número de página dentro do conjunto de resultados paginado. */
+                ativo?: boolean;
                 page?: number;
+                search?: string;
+                tipo?: string;
             };
             header?: never;
             path?: never;
@@ -1493,8 +2350,8 @@ export interface operations {
     accounts_personal_alunos_list: {
         parameters: {
             query?: {
-                /** @description Um número de página dentro do conjunto de resultados paginado. */
                 page?: number;
+                search?: string;
             };
             header?: never;
             path?: never;
@@ -1508,6 +2365,31 @@ export interface operations {
                 };
                 content: {
                     "application/json": components["schemas"]["PaginatedAlunoList"];
+                };
+            };
+        };
+    };
+    accounts_personal_alunos_create: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["PersonalAlunoCreateRequest"];
+                "application/x-www-form-urlencoded": components["schemas"]["PersonalAlunoCreateRequest"];
+                "multipart/form-data": components["schemas"]["PersonalAlunoCreateRequest"];
+            };
+        };
+        responses: {
+            201: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["Aluno"];
                 };
             };
         };
@@ -1529,6 +2411,100 @@ export interface operations {
                 };
                 content: {
                     "application/json": components["schemas"]["Aluno"];
+                };
+            };
+        };
+    };
+    accounts_personal_alunos_partial_update: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                id: string;
+            };
+            cookie?: never;
+        };
+        requestBody?: {
+            content: {
+                "application/json": components["schemas"]["PatchedPersonalAlunoUpdateRequest"];
+                "application/x-www-form-urlencoded": components["schemas"]["PatchedPersonalAlunoUpdateRequest"];
+                "multipart/form-data": components["schemas"]["PatchedPersonalAlunoUpdateRequest"];
+            };
+        };
+        responses: {
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["PersonalAlunoUpdate"];
+                };
+            };
+        };
+    };
+    accounts_personal_dashboard_retrieve: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["PersonalDashboard"];
+                };
+            };
+        };
+    };
+    assessments_alunos_anamnese_retrieve: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                id: string;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["Anamnese"];
+                };
+            };
+        };
+    };
+    assessments_alunos_anamnese_partial_update: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                id: string;
+            };
+            cookie?: never;
+        };
+        requestBody?: {
+            content: {
+                "application/json": components["schemas"]["PatchedAnamneseRequest"];
+                "application/x-www-form-urlencoded": components["schemas"]["PatchedAnamneseRequest"];
+                "multipart/form-data": components["schemas"]["PatchedAnamneseRequest"];
+            };
+        };
+        responses: {
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["Anamnese"];
                 };
             };
         };
@@ -1557,10 +2533,132 @@ export interface operations {
             };
         };
     };
+    assessments_alunos_resumo_retrieve: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                id: string;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["AvaliacaoResumoResponse"];
+                };
+            };
+        };
+    };
+    assessments_anamneses_list: {
+        parameters: {
+            query?: {
+                aluno_id?: string;
+                page?: number;
+            };
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["PaginatedAnamneseList"];
+                };
+            };
+        };
+    };
+    assessments_anamneses_create: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["AnamneseRequest"];
+                "application/x-www-form-urlencoded": components["schemas"]["AnamneseRequest"];
+                "multipart/form-data": components["schemas"]["AnamneseRequest"];
+            };
+        };
+        responses: {
+            201: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["Anamnese"];
+                };
+            };
+        };
+    };
+    assessments_anamneses_retrieve: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                /** @description Um string UUID que identifica este anamnese. */
+                id: string;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["Anamnese"];
+                };
+            };
+        };
+    };
+    assessments_anamneses_partial_update: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                /** @description Um string UUID que identifica este anamnese. */
+                id: string;
+            };
+            cookie?: never;
+        };
+        requestBody?: {
+            content: {
+                "application/json": components["schemas"]["PatchedAnamneseRequest"];
+                "application/x-www-form-urlencoded": components["schemas"]["PatchedAnamneseRequest"];
+                "multipart/form-data": components["schemas"]["PatchedAnamneseRequest"];
+            };
+        };
+        responses: {
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["Anamnese"];
+                };
+            };
+        };
+    };
     assessments_avaliacoes_list: {
         parameters: {
             query?: {
-                /** @description Um número de página dentro do conjunto de resultados paginado. */
+                aluno_id?: string;
+                ativo?: boolean;
+                data_fim?: string;
+                data_inicio?: string;
+                metodo?: string;
                 page?: number;
             };
             header?: never;
@@ -1672,6 +2770,91 @@ export interface operations {
                 };
                 content: {
                     "application/json": components["schemas"]["Avaliacao"];
+                };
+            };
+        };
+    };
+    assessments_me_anamnese_retrieve: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["Anamnese"];
+                };
+            };
+        };
+    };
+    assessments_me_anamnese_partial_update: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: {
+            content: {
+                "application/json": components["schemas"]["PatchedAnamneseRequest"];
+                "application/x-www-form-urlencoded": components["schemas"]["PatchedAnamneseRequest"];
+                "multipart/form-data": components["schemas"]["PatchedAnamneseRequest"];
+            };
+        };
+        responses: {
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["Anamnese"];
+                };
+            };
+        };
+    };
+    assessments_me_evolucao_retrieve: {
+        parameters: {
+            query?: {
+                data_fim?: string;
+                data_inicio?: string;
+            };
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["AlunoEvolucaoResponse"];
+                };
+            };
+        };
+    };
+    assessments_me_resumo_retrieve: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["AvaliacaoResumoResponse"];
                 };
             };
         };
@@ -1943,11 +3126,180 @@ export interface operations {
             };
         };
     };
+    settings_retrieve: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["PlatformSettings"];
+                };
+            };
+        };
+    };
+    settings_partial_update: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: {
+            content: {
+                "application/json": components["schemas"]["PatchedPlatformSettingsRequest"];
+                "application/x-www-form-urlencoded": components["schemas"]["PatchedPlatformSettingsRequest"];
+                "multipart/form-data": components["schemas"]["PatchedPlatformSettingsRequest"];
+            };
+        };
+        responses: {
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["PlatformSettings"];
+                };
+            };
+        };
+    };
+    workouts_categorias_list: {
+        parameters: {
+            query?: {
+                ativo?: boolean;
+                page?: number;
+                search?: string;
+            };
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["PaginatedCategoriaExercicioList"];
+                };
+            };
+        };
+    };
+    workouts_categorias_create: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["CategoriaExercicioRequest"];
+                "application/x-www-form-urlencoded": components["schemas"]["CategoriaExercicioRequest"];
+                "multipart/form-data": components["schemas"]["CategoriaExercicioRequest"];
+            };
+        };
+        responses: {
+            201: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["CategoriaExercicio"];
+                };
+            };
+        };
+    };
+    workouts_categorias_retrieve: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                /** @description Um string UUID que identifica este categoria de exercicio. */
+                id: string;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["CategoriaExercicio"];
+                };
+            };
+        };
+    };
+    workouts_categorias_partial_update: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                /** @description Um string UUID que identifica este categoria de exercicio. */
+                id: string;
+            };
+            cookie?: never;
+        };
+        requestBody?: {
+            content: {
+                "application/json": components["schemas"]["PatchedCategoriaExercicioRequest"];
+                "application/x-www-form-urlencoded": components["schemas"]["PatchedCategoriaExercicioRequest"];
+                "multipart/form-data": components["schemas"]["PatchedCategoriaExercicioRequest"];
+            };
+        };
+        responses: {
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["CategoriaExercicio"];
+                };
+            };
+        };
+    };
+    workouts_categorias_arquivar_create: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                /** @description Um string UUID que identifica este categoria de exercicio. */
+                id: string;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["CategoriaExercicio"];
+                };
+            };
+        };
+    };
     workouts_exercicios_list: {
         parameters: {
             query?: {
-                /** @description Um número de página dentro do conjunto de resultados paginado. */
+                ativo?: boolean;
+                categoria_id?: string;
+                grupo_muscular?: string;
+                origem?: string;
                 page?: number;
+                search?: string;
+                status?: string;
             };
             header?: never;
             path?: never;
@@ -2040,6 +3392,28 @@ export interface operations {
             };
         };
     };
+    workouts_exercicios_aprovar_create: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                /** @description Um string UUID que identifica este exercicio. */
+                id: string;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["Exercicio"];
+                };
+            };
+        };
+    };
     workouts_exercicios_arquivar_create: {
         parameters: {
             query?: never;
@@ -2062,11 +3436,84 @@ export interface operations {
             };
         };
     };
+    workouts_exercicios_rejeitar_create: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                /** @description Um string UUID que identifica este exercicio. */
+                id: string;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["Exercicio"];
+                };
+            };
+        };
+    };
+    workouts_exercicios_aprovar_lote_create: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["ExercicioBulkActionRequest"];
+                "application/x-www-form-urlencoded": components["schemas"]["ExercicioBulkActionRequest"];
+                "multipart/form-data": components["schemas"]["ExercicioBulkActionRequest"];
+            };
+        };
+        responses: {
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["BulkActionResponse"];
+                };
+            };
+        };
+    };
+    workouts_exercicios_rejeitar_lote_create: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["ExercicioBulkActionRequest"];
+                "application/x-www-form-urlencoded": components["schemas"]["ExercicioBulkActionRequest"];
+                "multipart/form-data": components["schemas"]["ExercicioBulkActionRequest"];
+            };
+        };
+        responses: {
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["BulkActionResponse"];
+                };
+            };
+        };
+    };
     workouts_templates_list: {
         parameters: {
             query?: {
-                /** @description Um número de página dentro do conjunto de resultados paginado. */
+                ativo?: boolean;
                 page?: number;
+                search?: string;
             };
             header?: never;
             path?: never;
@@ -2212,7 +3659,8 @@ export interface operations {
     workouts_treinos_list: {
         parameters: {
             query?: {
-                /** @description Um número de página dentro do conjunto de resultados paginado. */
+                aluno_id?: string;
+                ativo?: boolean;
                 page?: number;
             };
             header?: never;

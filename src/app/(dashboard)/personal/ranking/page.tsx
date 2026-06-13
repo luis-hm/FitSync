@@ -1,5 +1,5 @@
-import { ModulePage } from "@/components/shared/module-page";
+import { PersonalRankingPage as PersonalRankingScreen } from "@/features/assessments/components/personal-ranking-page";
 
 export default function PersonalRankingPage() {
-  return <ModulePage title="Ranking" description="Indicadores comparativos de evolucao da carteira de alunos." />;
+  return <PersonalRankingScreen />;
 }

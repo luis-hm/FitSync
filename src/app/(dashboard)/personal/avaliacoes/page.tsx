@@ -1,5 +1,10 @@
-import { ModulePage } from "@/components/shared/module-page";
+import { PersonalAssessmentsPage as PersonalAssessmentsScreen } from "@/features/assessments/components/personal-assessments-page";
 
-export default function PersonalAssessmentsPage() {
-  return <ModulePage title="Avaliacoes" description="Registro de medidas, bioimpedancia, dobras e circunferencias." />;
+export default async function PersonalAssessmentsPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ aluno_id?: string }>;
+}) {
+  const params = await searchParams;
+  return <PersonalAssessmentsScreen initialStudentFilter={params.aluno_id ?? ""} />;
 }

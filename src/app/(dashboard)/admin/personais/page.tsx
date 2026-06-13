@@ -1,5 +1,5 @@
-import { ModulePage } from "@/components/shared/module-page";
+import { AdminPersonalsPage as AdminPersonalsScreen } from "@/features/accounts/components/admin-personals-page";
 
 export default function AdminPersonalsPage() {
-  return <ModulePage title="Personais" description="Acompanhamento dos profissionais cadastrados." />;
+  return <AdminPersonalsScreen />;
 }

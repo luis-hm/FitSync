@@ -39,12 +39,19 @@ npm run build
 npm run validate
 ```
 
+Regra operacional:
+
+- Nao iniciar `npm run dev` automaticamente ao finalizar tarefas. So subir dev server quando o usuario pedir explicitamente.
+- Se precisar validar interface, primeiro perguntar ao usuario se quer que o servidor seja iniciado.
+- Se um dev server tiver sido iniciado pelo agente, encerrar o processo antes de finalizar a resposta, salvo pedido explicito para deixa-lo rodando.
+
 ## Ambientes
 
 Frontend local:
 
 ```text
-http://localhost:3001
+preferencia: http://localhost:3001
+se o Next ja estiver ativo neste repo, usar a porta informada no terminal
 ```
 
 API local:
@@ -59,7 +66,7 @@ Variavel esperada no front:
 NEXT_PUBLIC_API_BASE_URL=http://localhost:8000
 ```
 
-A porta `3000` pode estar ocupada pelo Mobi Escola. Neste ambiente, o FitSync foi deixado em `3001`.
+A porta `3000` pode estar ocupada pelo Mobi Escola. Quando o usuario pedir explicitamente para iniciar o frontend, preferir `3001` se `3000` estiver ocupada, mas nao derrubar um servidor ativo sem pedido do usuario.
 
 ## Estrutura Principal
 
@@ -181,6 +188,16 @@ src/features/assessments/api/assessments.api.ts
 src/features/core/api/options.api.ts
 ```
 
+Padrao de API inspirado no Mobi, adaptado ao FitSync:
+
+- `src/lib/api/http.ts` e a camada central tipo `apiService`: baseURL, cookies, token bearer, refresh e interceptors.
+- `src/features/*/api`: metodos de dominio, um arquivo por modulo.
+- `src/features/*/hooks`: React Query para cache, loading, erro, invalidacao e mutations.
+- `src/features/*/types`: aliases dos DTOs gerados em `src/types/generated/api.d.ts`.
+- `src/features/*/schemas`: validacao Zod dos formularios.
+- `src/features/*/mappers`: conversao form/UI -> payload e DTO -> exibicao quando necessario.
+- Paginas e componentes de tela nao chamam HTTP direto.
+
 ## UI
 
 Usar:
@@ -188,6 +205,32 @@ Usar:
 - `src/components/ui`: componentes shadcn/ui.
 - `src/components/layout`: shell, sidebar, header, layout protegido.
 - `src/components/shared`: componentes reutilizaveis do produto, como `PageHeader`, `StatCard`, `EmptyState`, `ModulePage`.
+
+## Design System FitSync
+
+O padrao visual operacional atual e dark, denso e orientado a dashboard:
+
+```text
+background: #0E0E0E
+sidebar:    #141414
+cards:      #1A1A1A
+inputs:     #1E1E1E
+borders:    #2A2A2A
+text:       #F5F5F5
+muted text: #888888
+accent:     #B8FF57
+success:    #22C55E
+danger:     #FF4D4D
+```
+
+Regras de tela operacional:
+
+- Sidebar compacta, logo com `Dumbbell`, fundo `#141414`, borda `#2A2A2A`.
+- Item ativo da navegacao usa fundo `#1E1E1E`, texto claro e barra lateral lime.
+- Topbar tem `h-20`, fundo escuro, avatar, role e toggle de tema.
+- Telas de listagem devem ter busca, filtros, paginacao, loading, erro, vazio, toast e acoes reais.
+- Dados mockados so podem entrar como placeholder explicito; nunca usar mock como metrica real.
+- Nao adicionar itens de menu sem dominio/API correspondente.
 
 Toda tela de dados deve tratar:
 
@@ -240,15 +283,23 @@ Core:
 
 ```text
 GET /api/options/
+GET/PATCH /api/settings/
 GET /api/health/
 ```
 
 Accounts:
 
 ```text
+GET /api/accounts/admin/dashboard/
 GET /api/accounts/admin/usuarios/
+POST /api/accounts/admin/usuarios/
+PATCH /api/accounts/admin/usuarios/{id}/
+POST /api/accounts/admin/usuarios/{id}/ativar/
+POST /api/accounts/admin/usuarios/{id}/desativar/
 GET /api/accounts/admin/personais/
+GET/PATCH /api/accounts/admin/personais/{id}/
 GET /api/accounts/admin/alunos/
+GET/PATCH /api/accounts/admin/alunos/{id}/
 GET /api/accounts/personal/alunos/
 GET /api/accounts/aluno/me/
 ```
@@ -257,6 +308,9 @@ Workouts:
 
 ```text
 GET /api/workouts/exercicios/
+POST /api/workouts/exercicios/
+PATCH /api/workouts/exercicios/{id}/
+POST /api/workouts/exercicios/{id}/arquivar/
 GET /api/workouts/templates/
 GET /api/workouts/treinos/
 ```
@@ -277,7 +331,7 @@ GET /api/assessments/personal/ranking/
 - Nao guardar refresh token no frontend.
 - Nao criar chamadas HTTP soltas dentro de paginas.
 - Preferir API por feature + hooks quando houver estado de loading/cache.
-- Usar `react-hook-form` + `zod` para formularios.
+- Usar `zod` para validar formularios; usar `react-hook-form` quando o formulario crescer em complexidade ou precisar de estado fino por campo.
 - Usar componentes `shadcn/ui` ja instalados.
 - Rodar validacoes antes de finalizar.
 

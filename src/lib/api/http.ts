@@ -1,5 +1,6 @@
 import axios, { AxiosError, type AxiosRequestConfig } from "axios";
-import type { RefreshResponse } from "@/features/auth/types/auth.types";
+import type { AuthUser, RefreshResponse } from "@/features/auth/types/auth.types";
+import { queryClient } from "@/lib/query/query-client";
 import { useAuthStore } from "@/stores/auth-store";
 
 export type ApiRequestConfig = AxiosRequestConfig & {
@@ -44,7 +45,26 @@ async function refreshAccessToken() {
         useAuthStore.getState().setAccessToken(access);
         return access;
       })
+      .then(async (access) => {
+        try {
+          const response = await axios.get<AuthUser>(`${apiBaseUrl}/api/auth/me/`, {
+            headers: {
+              Authorization: `Bearer ${access}`,
+            },
+            withCredentials: true,
+          });
+          const currentUserId = useAuthStore.getState().user?.id;
+          if (currentUserId && currentUserId !== response.data.id) {
+            queryClient.clear();
+          }
+          useAuthStore.getState().setUser(response.data);
+        } catch {
+          // Keep the refreshed access token even if user hydration fails transiently.
+        }
+        return access;
+      })
       .catch(() => {
+        queryClient.clear();
         useAuthStore.getState().clearSession();
         return null;
       })
@@ -58,8 +78,9 @@ async function refreshAccessToken() {
 
 http.interceptors.request.use((config) => {
   const accessToken = useAuthStore.getState().accessToken;
+  const apiConfig = config as ApiRequestConfig;
 
-  if (accessToken) {
+  if (accessToken && !apiConfig.skipAuthRefresh && !isAuthEndpoint(config.url)) {
     config.headers.Authorization = `Bearer ${accessToken}`;
   }
 

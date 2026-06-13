@@ -1,5 +1,5 @@
-import { ModulePage } from "@/components/shared/module-page";
+import { AdminUsersPage as AdminUsersScreen } from "@/features/accounts/components/admin-users-page";
 
 export default function AdminUsersPage() {
-  return <ModulePage title="Usuarios" description="Gestao de contas administrativas, personais e alunos." />;
+  return <AdminUsersScreen />;
 }

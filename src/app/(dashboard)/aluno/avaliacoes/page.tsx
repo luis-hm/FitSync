@@ -1,5 +1,5 @@
-import { ModulePage } from "@/components/shared/module-page";
+import { StudentAssessmentsPage as StudentAssessmentsScreen } from "@/features/assessments/components/student-assessments-page";
 
 export default function StudentAssessmentsPage() {
-  return <ModulePage title="Minhas avaliacoes" description="Historico de avaliacoes fisicas registradas pelo personal." />;
+  return <StudentAssessmentsScreen />;
 }

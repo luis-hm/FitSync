@@ -1,5 +1,5 @@
-import { ModulePage } from "@/components/shared/module-page";
+import { StudentProfilePage as StudentProfileScreen } from "@/features/accounts/components/student-profile-page";
 
 export default function StudentProfilePage() {
-  return <ModulePage title="Meu perfil" description="Dados pessoais, medidas base e informacoes de acompanhamento." />;
+  return <StudentProfileScreen />;
 }

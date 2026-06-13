@@ -1,5 +1,5 @@
-import { ModulePage } from "@/components/shared/module-page";
+import { AdminStudentsPage as AdminStudentsScreen } from "@/features/accounts/components/admin-students-page";
 
 export default function AdminStudentsPage() {
-  return <ModulePage title="Alunos" description="Visao administrativa dos alunos da plataforma." />;
+  return <AdminStudentsScreen />;
 }

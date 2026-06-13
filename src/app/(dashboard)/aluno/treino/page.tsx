@@ -1,5 +1,5 @@
-import { ModulePage } from "@/components/shared/module-page";
+import { StudentWorkoutPage as StudentWorkoutScreen } from "@/features/workouts/components/student-workout-page";
 
 export default function StudentWorkoutPage() {
-  return <ModulePage title="Meu treino" description="Rotina ativa, exercicios e parametros de execucao." />;
+  return <StudentWorkoutScreen />;
 }
