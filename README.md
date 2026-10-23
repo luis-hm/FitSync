@@ -1,3 +1,12 @@
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="docs/brand/fitsync-logo-dark.svg">
+    <img alt="FitSync" src="docs/brand/fitsync-logo-light.svg" width="360">
+  </picture>
+</p>
+
+FitSync é uma plataforma para personal trainers acompanharem alunos, criarem treinos e templates de treino, registrarem avaliações físicas e visualizarem a evolução corporal. Este repositório é o front-end (Next.js); a API fica em [FitSync-api](https://github.com/luis-hm/FitSync-api).
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
